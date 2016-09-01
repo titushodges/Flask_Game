@@ -1,0 +1,43 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#wrapper{
+	width: 950px;
+	height: auto;
+	margin: auto;
+}
+h3{
+	display: inline-block;
+	margin: 20px 10px;
+}
+p:first-of-type{
+	display: inline-block;
+	margin-top: 20px
+}
+button{
+	display: block;
+	margin-left: 10px;
+}
+button a{
+	text-decoration: none;
+}
+.places{
+	display: inline-block;
+	border: 1px solid black;
+	text-align: center;
+	margin: 20px 0px;
+}
+.places input{
+	display: block;
+	margin: 0px auto 20px auto;
+}
+
+#scroll{ 
+	width:673px;
+	height:200px;
+	overflow-y: scroll;
+	max-width:673px;
+	max-height:200px;
+	border: 1px solid black;
+}

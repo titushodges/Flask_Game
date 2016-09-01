@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ninja Gold</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='text.css') }}">
+	</head>
+	<body>
+		<div id="wrapper">
+			<h3>Your Gold:</h3>
+			<p>{{session.gold}}</p>
+			<button><a href="/reset">Reset Your Gold!</a></button>
+			<div class="places">
+				<form action="/process_money" method="post">
+					<h2>Farm</h2>
+					<h3>(earns 10-20 gold)</h3>
+					<input type="hidden" name="building" value="farm">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/process_money" method="post">
+					<h2>Cave</h2>
+					<h3>(earns 5-10 gold)</h3>
+					<input type="hidden" name="building" value="cave">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/process_money" method="post">
+					<h2>House</h2>
+					<h3>(earns 2-5 gold)</h3>
+					<input type="hidden" name="building" value="house">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div class="places">
+				<form action="/process_money" method="post">
+					<h2>Casino</h2>
+					<h3>(earns/takes 0-50 gold)</h3>
+					<input type="hidden" name="building" value="casino">
+					<input type="submit" name="Sub" value="Find Gold!">
+				</form>
+			</div>
+			<div id="activities">
+				<h4>Activities</h4>
+				<div id="scroll">
+				{%for i in range(0,session.z|length)%}
+
+				<p>{{session.z[i]}}</p>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
